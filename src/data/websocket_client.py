@@ -71,21 +71,33 @@ class RouletteWebSocketClient:
             self.connected = False
     
     async def listen(self):
-        """Listen for incoming messages"""
-        if not self.connected:
-            self.logger.error("Cannot listen: WebSocket not connected")
-            return
+        """Listen for incoming messages with automatic reconnection"""
+        while True:  # Infinite loop for reconnection
+            if not self.connected:
+                # self.logger.error("WebSocket not connected - Attempting to connect...")
+                if not await self.connect():
+                    self.logger.error("Connection failed - Retrying in 60 seconds...")
+                    await asyncio.sleep(60)
+                    continue
+                
+            try:
+                self.logger.info("Listening for roulette spins...")
+                while self.connected:
+                    try:
+                        message = await self.websocket.recv()
+                        await self.process_message(message)
+                    except websockets.exceptions.ConnectionClosed:
+                        self.logger.error("Connection lost - Attempting to reconnect...")
+                        self.connected = False
+                        break
+                    except Exception as e:
+                        self.logger.error(f"Error processing message: {str(e)}")
+            except Exception as e:
+                self.logger.error(f"Fatal error in WebSocket listener: {str(e)}")
+                self.connected = False
             
-        try:
-            while self.connected:
-                message = await self.websocket.recv()
-                await self.process_message(message)
-        except websockets.exceptions.ConnectionClosed:
-            # self.logger.info("WebSocket connection closed")
-            self.connected = False
-        except Exception as e:
-            self.logger.error(f"Error in WebSocket listener: {str(e)}")
-            self.connected = False
+            # Wait before attempting to reconnect
+            await asyncio.sleep(60)
     
     async def process_message(self, message):
         """Process incoming WebSocket messages"""
