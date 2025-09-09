@@ -35,6 +35,19 @@ class Top1Strategy:
         self.bet_amount = 0.01
         self.payout = 35
         
+        # Roulette colors
+        self.red_numbers = {1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36}
+        self.black_numbers = {2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35}
+
+    def get_color(self, number):
+        """Get the color of a roulette number"""
+        if number == 0:
+            return "green"
+        elif number in self.red_numbers:
+            return "red"
+        else:
+            return "black"
+        
     def load_model(self):
         """Load or create the LSTM model"""
         if os.path.exists(self.model_file):
