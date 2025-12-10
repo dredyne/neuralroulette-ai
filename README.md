@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/devddine/NeuralRoulette-AI"><img src="assets/logo.svg" alt="NeuralRoulette AI" width="200"></a>
+  <a href="https://github.com/Dredyne/NeuralRoulette-AI"><img src="assets/logo.svg" alt="NeuralRoulette AI" width="200"></a>
   <br>
   NeuralRoulette AI
   <br>
@@ -9,20 +9,20 @@
 <h4 align="center">An advanced machine learning system for predicting roulette outcomes using LSTM</a>.</h4>
 
 <p align="center">
-  <a href="https://github.com/devddine/NeuralRoulette-AI/issues">
-    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/devddine/NeuralRoulette-AI?style=plastic">
+  <a href="https://github.com/Dredyne/NeuralRoulette-AI/issues">
+    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Dredyne/NeuralRoulette-AI?style=plastic">
   </a>  
-  <a href="https://github.com/devddine/NeuralRoulette-AI/pulls">
-    <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/devddine/NeuralRoulette-AI?style=plastic">
+  <a href="https://github.com/Dredyne/NeuralRoulette-AI/pulls">
+    <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/Dredyne/NeuralRoulette-AI?style=plastic">
   </a>
   <a href="https://discord.gg/UPyggZ2cK8">
     <img alt="Discord" src="https://img.shields.io/discord/827945236218904627?style=plastic&label=discord">
   </a>
-  <a href="https://github.com/devddine/NeuralRoulette-AI/graphs/contributors">
-    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/devddine/NeuralRoulette-AI?style=plastic">
+  <a href="https://github.com/Dredyne/NeuralRoulette-AI/graphs/contributors">
+    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Dredyne/NeuralRoulette-AI?style=plastic">
   </a>
-  <a href="https://github.com/sponsors/devddine">
-    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/devddine?style=plastic">
+  <a href="https://github.com/sponsors/Dredyne">
+    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/Dredyne?style=plastic">
   </a>
 </p>
 
@@ -99,7 +99,7 @@ NeuralRoulette-AI/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/devddine/NeuralRoulette-AI.git
+git clone https://github.com/Dredyne/NeuralRoulette-AI.git
 cd NeuralRoulette-AI
 ```
 
@@ -240,4 +240,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center"><sub>
 
-Built with ❤️ by [devddine](https://github.com/devddine)</sub></div>
+Built with ❤️ by [Dredyne](https://github.com/Dredyne)</sub></div>
